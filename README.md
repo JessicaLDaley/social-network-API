@@ -23,6 +23,8 @@ As a social media startup, I want an API for my social network that uses a NoSQL
     
 ![insomniauser](https://user-images.githubusercontent.com/79805880/147492730-9cb0d59f-4b3f-48d9-ac86-f5ccff65d277.png)
 
+**Walkthrough Video:** https://watch.screencastify.com/v/Jql6lG7Eb3phcs0fN0Oh
+
 
 **User Endpoints:**
 
