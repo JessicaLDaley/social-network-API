@@ -19,7 +19,7 @@ const thoughtController = {
             .select('-__v')
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
-                    res.status(404).json({message: 'No thought found with this id'});
+                    res.status(404).json({message: 'No thought found with that id'});
                     return;
                 }
                 res.json(dbThoughtData);
@@ -39,7 +39,7 @@ const thoughtController = {
                 )
                 .then(dbUserData => {
                     if (!dbUserData) {
-                        res.status(404).json({ message: 'No user found with this id' });
+                        res.status(404).json({ message: 'No user found with that id' });
                         return;
                     }
                     res.json(dbUserData);
@@ -56,13 +56,34 @@ const thoughtController = {
             )
             .then(dbThoughtData => {
                 if (!dbThoughtData) {
-                    res.status(404).json({ message: 'No thought found with this id' });
+                    res.status(404).json({ message: 'No thought found with that id' });
                     return;
                 }
                 res.json(dbThoughtData);
             })
             .catch(err => res.status(400).json(err));
         },
+        // DELETE /api/thoughts/:id
+    deleteThought({ params }, res) {
+        // delete thought
+        Thought.findOneAndDelete({ _id: params.id })
+        .then(dbThoughtData => {
+            if (!dbThoughtData) {
+                res.status(404).json({ message: 'No thought found with that id'});
+                return;
+            }
+            // delete thought in user's thought array
+            User.findOneAndUpdate(
+                { username: dbThoughtData.username },
+                { $pull: { thoughts: params.id } }
+            )
+            .then(() => {
+                res.json({message: 'Successfully deleted thought'});
+            })
+            .catch(err => res.status(500).json(err));
+        })
+        .catch(err => res.status(500).json(err));
+    },
     
     }
 
