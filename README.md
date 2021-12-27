@@ -42,7 +42,7 @@ Thought Endpoints:
     Update a thought: PUT /api/thoughts/:id
     Delete a thought: DELETE /api/thoughts/:id
 
-Reaction:
+Reaction Endpoints:
 
     Add a reaction: PUT /api/thoughts/:id/reactions
     Delete a reaction: DELETE /api/thoughts/:id/reactions
