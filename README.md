@@ -21,8 +21,7 @@ Models:
     Thought
     Reaction 
 
-Endpoints:
-![insomniauser](https://user-images.githubusercontent.com/79805880/147492467-1553e4b6-f6b9-48fe-bad1-2f93ce55de66.png)
+Endpoints //////////////////////////////////////////////////////////////////////////////////////////////
 
 User:
 
@@ -46,6 +45,9 @@ Reaction:
 
     Add a reaction: PUT /api/thoughts/:id/reactions
     Delete a reaction: DELETE /api/thoughts/:id/reactions
+    
+    ![insomniauser](https://user-images.githubusercontent.com/79805880/147492467-1553e4b6-f6b9-48fe-bad1-2f93ce55de66.png)
+
 
 Packages:
 
