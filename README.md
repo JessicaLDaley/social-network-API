@@ -20,10 +20,11 @@ Models:
     User
     Thought
     Reaction 
+    
+![insomniauser](https://user-images.githubusercontent.com/79805880/147492730-9cb0d59f-4b3f-48d9-ac86-f5ccff65d277.png)
 
-Endpoints //////////////////////////////////////////////////////////////////////////////////////////////
 
-User:
+User Endpoints:
 
     Get all users: GET /api/users
     Create a user: POST /api/users
@@ -33,7 +34,7 @@ User:
     Add a friend: PUT /api/users/:userId/friends/:friendId
     Delete a friend: DELETE /api/users/:userId/friends/:friendId
 
-Thought:
+Thought Endpoints:
 
     Get all thoughts: GET /api/thoughts
     Create a thought: POST /api/thoughts
@@ -46,7 +47,6 @@ Reaction:
     Add a reaction: PUT /api/thoughts/:id/reactions
     Delete a reaction: DELETE /api/thoughts/:id/reactions
     
-    ![insomniauser](https://user-images.githubusercontent.com/79805880/147492467-1553e4b6-f6b9-48fe-bad1-2f93ce55de66.png)
 
 
 Packages:
